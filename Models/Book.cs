@@ -11,11 +11,13 @@ namespace Cancel_Nicole_Lab2.Models
 
         public string Title { get; set; }
         public int AuthorID { get; set; } 
-        public Authors Author { get; set; }
+        public Author Author { get; set; }
         public decimal Price { get; set; }
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
         public int? PublisherID { get; set; }
         public Publisher? Publisher { get; set; }
+
+        public ICollection<BookCategory>? BookCategories { get; set; }
     }
 }
